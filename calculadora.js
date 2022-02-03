@@ -4,11 +4,10 @@ const calc = document.getElementsByTagName('h1')[0]
 calc.onclick = function () {
     document.getElementsByClassName('calculadora')[0].classList.toggle('calc-open')
 }
-    
-
 
 let n1 = 0
 let op = null
+
 function insert(n) {
     if (p.innerHTML == 0) {
         p.innerHTML = ''
@@ -43,22 +42,18 @@ function mult() {
 function delet() {
     p.innerHTML = p.innerHTML.substring(0, p.innerHTML.length -1)
 }
+
 function result() {
     if (op == '+'){
-        console.log(n1);
-        console.log(p.innerHTML);
         p.innerHTML = parseFloat(n1) + parseFloat(p.innerHTML)
     }
     if (op == '-'){
-        console.log(n1);
         p.innerHTML = parseFloat(n1) - parseFloat(p.innerHTML)
     }
     if (op == '*'){
-        console.log(n1);
         p.innerHTML = parseFloat(n1) * parseFloat(p.innerHTML)
     }
     if (op == '/'){
-        console.log(n1);
         p.innerHTML = parseFloat(n1) / parseFloat(p.innerHTML)
     }
 }
